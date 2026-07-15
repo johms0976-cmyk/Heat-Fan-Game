@@ -628,89 +628,6 @@ const TRACK_PUKEKOHE = {
   spacePts:[[523,577],[487,567],[447,547],[409,520],[366,510],[325,489],[283,470],[240,457],[194,459],[155,488],[146,541],[156,582],[178,626],[190,676],[177,723],[136,745],[92,749],[64,713],[48,669],[46,623],[48,577],[53,530],[56,484],[57,437],[62,391],[64,345],[71,299],[73,253],[74,206],[77,160],[83,114],[104,74],[146,60],[190,59],[233,47],[277,52],[321,52],[365,51],[410,50],[454,51],[498,52],[543,50],[587,45],[631,42],[675,43],[719,49],[762,59],[804,73],[846,87],[888,103],[929,121],[969,139],[1010,157],[1050,176],[1091,192],[1124,201],[1143,240],[1143,280],[1090,327],[1021,336],[973,346],[930,370],[888,396],[849,427],[826,470],[803,514],[778,556],[742,590],[697,610],[648,615],[599,606],[553,589]]
 };
 
-/* ---------------- Track: Mount Panorama (Bathurst) — fan board, 73 spaces, 14 corners.
-   The famous mountain circuit, laid out landscape to fit the board area:
-   Sector 1 Pit Straight & Mountain (0–20) climbs the bottom edge,
-   Sector 2 across the top esses (21–41) winds up the right, Sector 3 Conrod
-   Straight (42–54) is the long fast run across the top, Sector 4 The Chase
-   (55–61) chicanes at the top-left, Sector 5 Murray's & Finish (62–72) drops
-   back down the left to the flag. Geometry traced from the supplied outline. */
-const TRACK_PANORAMA = {
-  key:"panorama",
-  name:"Mount Panorama", spaces:65, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"Australian Grand Prix · Mount Panorama, Bathurst",
-  subtitle:"Conquer the Mountain",
-  tagline:"Mount Panorama, Bathurst — 6.2 km up and over the mountain, fan table build",
-  terrain:"mountain",
-  plate:{ x:111, y:62, w:460, h:176, rot:-3, title:"MOUNT PANORAMA", sub:"BATHURST",
-          titleColor:"#3a2410", subColor:"#7a3a1f" },
-  panel:{x:288,y:264}, podium:{x:790,y:283},
-  weatherTok:{x:236,y:264,r:38},
-  corners:[ {at:8, limit:8, name:"Hell Corner"}, {at:26, limit:4, name:"Sulman Park"}, {at:38, limit:5, name:"The Dipper"}, {at:43, limit:6, name:"Forrest's Elbow"}, {at:46, limit:2, name:"The Chase L", chicane:1}, {at:50, limit:2, name:"The Chase R", chicane:1}, {at:61, limit:3, name:"Chase Exit"} ],
-  gravel:{ inner:[23,24,25], outer:[19,20,21,22,23,24,25] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[120,658],[120,696],[142,727],[178,726],[216,719],[253,712],[291,707],[329,706],[367,716],[405,722],[442,710],[476,693],[512,679],[549,669],[588,663],[626,659],[665,652],[702,646],[740,640],[778,634],[816,628],[854,623],[893,619],[931,613],[969,606],[1007,597],[1042,583],[1075,562],[1093,530],[1079,494],[1056,464],[1036,431],[1015,398],[996,364],[983,328],[974,291],[969,253],[966,214],[956,178],[931,148],[902,124],[868,104],[831,94],[794,102],[762,121],[733,146],[707,175],[680,200],[641,203],[603,195],[564,196],[555,230],[565,265],[583,300],[600,334],[600,368],[575,394],[538,404],[500,412],[461,416],[424,423],[386,432],[348,440],[310,448],[271,452],[234,452],[197,441],[160,443],[133,467],[124,504],[122,542],[121,580],[120,619]]
-    
-  };
-
-/* ---------------- Track: Eastern Creek (Sydney Motorsport Park) — fan board,
-   73 spaces, 11 corners, 2 laps. Traced from the GP-circuit schematic:
-   Sector 1 Brabham Straight along the top (0–7) runs west into the fast Turn 1
-   sweeper; the left edge drops to the Turn 2 hairpin (bottom-left), climbs back
-   through Turn 3 and heads east across the infield to Turn 4 (0–26). Sector 2
-   dives south to Brock's (Turn 5) and sweeps along the bottom to Turn 6, then
-   climbs back up through Turn 7 and over the infield hump at Turn 8 (27–48).
-   Sector 3 is the tight right-side complex Turn 9–10–11 before the long run
-   back onto the Brabham Straight and the flag (49–72). */
-const TRACK_EASTERN_CREEK = {
-  key:"easterncreek",
-  name:"Eastern Creek", spaces:73, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"Australian Grand Prix · Sydney Motorsport Park, Eastern Creek",
-  subtitle:"Western Sydney Speed",
-  tagline:"Sydney Motorsport Park (Eastern Creek) — 3.9 km GP circuit, fan table build",
-  terrain:"parkland",
-  plate:{ x:355, y:180, w:320, h:104, rot:-2, title:"SYDNEY MOTORSPORT PARK", sub:"EASTERN CREEK",
-          titleColor:"#3a2410", subColor:"#7a3a1f" },
-  panel:{x:1058,y:552}, podium:{x:1092,y:702},
-  weatherTok:{x:700,y:300,r:38},
-  corners:[ {at:7, limit:4, name:"Turn 1"}, {at:18, limit:2, name:"Turn 2 (Hairpin)"}, {at:21, limit:3, name:"Turn 3"}, {at:27, limit:4, name:"Turn 4"}, {at:37, limit:5, name:"Turn 5"}, {at:48, limit:2, name:"Turn 6"}, {at:56, limit:7, name:"Turn 7"}, {at:61, limit:5, name:"Turn 8"} ],
-  gravel:{ inner:[], outer:[] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[500,100],[447,93],[395,85],[342,78],[290,71],[237,70],[185,80],[138,104],[109,148],[99,199],[93,252],[87,305],[83,358],[80,411],[80,464],[87,516],[109,564],[155,586],[193,553],[189,501],[173,450],[176,402],[225,383],[278,382],[331,382],[384,385],[436,392],[473,428],[488,479],[495,531],[499,584],[523,631],[561,668],[605,697],[654,718],[704,735],[756,744],[807,733],[832,688],[835,635],[822,584],[805,534],[784,485],[758,439],[719,404],[673,378],[625,355],[573,343],[570,333],[623,328],[676,322],[729,319],[782,317],[834,320],[885,335],[928,365],[980,374],[1031,362],[1077,336],[1116,300],[1142,258],[1119,211],[1074,183],[1024,164],[973,149],[922,137],[870,126],[818,118],[765,112],[712,108],[659,105],[606,103],[553,103]]
-};
-
-
-/* ---------------- Track: Manfeild — Circuit Chris Amon (Feilding, NZ)
-   Fan board, 74 spaces, 7 corners, 2 laps. Traced from the supplied outline
-   of the Manawatu circuit. A flowing clockwise lap: the long back straight
-   runs along the bottom (S/F, spaces 0-8) heading west into the tight Turn 1
-   hairpin at the bottom-left; the lower-left sweeper climbs up and over to
-   Turn 2, then the road drops through the Turn 3-4 esses and doubles back on
-   itself through the tight Turn 5 hook. From there it sweeps up into the long
-   top loop, wrapping the far tip at Turn 6, and returns along the top to the
-   fast Turn 7 on the right that drops the cars back onto the back straight. */
-const TRACK_MANFEILD = {
-  key:"manfeild",
-  name:"Manfeild", spaces:74, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"New Zealand Grand Prix · Manfeild, Feilding",
-  subtitle:"Circuit Chris Amon",
-  tagline:"Manfeild: Circuit Chris Amon, Feilding — 3.0 km of cambered sweeps and the long back straight, fan table build",
-  terrain:"farmland",
-  plate:{ x:370, y:348, w:300, h:104, rot:-2, title:"NEW ZEALAND GRAND PRIX", sub:"MANFEILD",
-          titleColor:"#1d3a24", subColor:"#0f5132" },
-  panel:{x:1052,y:74}, podium:{x:1086,y:722},
-  weatherTok:{x:700,y:300,r:38},
-  corners:[ {at:9, limit:4, name:"Turn 1 (Hairpin)"}, {at:16, limit:4, name:"Turn 2"}, {at:28, limit:3, name:"Turn 3 (Esses)"}, {at:45, limit:2, name:"Turn 4 (Esses)"}, {at:63, limit:5, name:"Turn 5 (Hook)"} ],
-  gravel:{ inner:[], outer:[] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[587,650],[524,652],[461,654],[398,655],[335,654],[272,653],[209,650],[146,643],[86,625],[45,579],[47,517],[70,459],[118,420],[179,402],[241,405],[294,437],[326,490],[381,521],[442,538],[503,550],[566,556],[628,547],[691,538],[753,531],[816,537],[873,513],[922,474],[971,434],[993,382],[935,369],[877,346],[819,320],[759,303],[698,287],[636,272],[575,259],[513,247],[451,236],[389,227],[326,222],[263,219],[200,211],[139,221],[87,255],[73,200],[125,170],[187,159],[250,151],[313,146],[376,145],[439,146],[502,149],[564,153],[627,158],[690,166],[752,176],[814,187],[876,200],[937,214],[998,231],[1056,254],[1106,292],[1141,344],[1155,405],[1142,466],[1115,524],[1076,572],[1023,606],[963,625],[901,638],[839,646],[776,650],[713,651],[650,650]]
-};
 
   /* ---------------- Track: Montjuic (fan board: 73 spaces, 4 corners, 2 laps)
    Geometry traced from the printed board art (tracks/Pukekohe.jpeg, 3:2).
@@ -740,7 +657,7 @@ const TRACK_MONTJUIC = {
 /* ===== Silverrock — added with the REVUP track editor ===== */
 const TRACK_SILVERROCK = {
   key:"silverrock",
-  name:"Silverrock", spaces:89, defaultLaps:2, heat:6, stress:3,
+  name:"Silverstone", spaces:89, defaultLaps:2, heat:6, stress:3,
   image:"tracks/Silverrock.jpeg", imgW:1200, imgH:800,
   eyebrow:"British Grand Prix · Silverrock",
   subtitle:"Custom build",
@@ -780,131 +697,8 @@ const TRACK_MONACO = {
   spacePts:[[127,274],[142,232],[160,190],[187,157],[211,121],[244,84],[295,57],[344,93],[365,139],[383,181],[404,217],[428,250],[452,286],[479,323],[513,350],[546,383],[576,410],[609,434],[660,455],[709,473],[754,473],[811,452],[835,410],[847,356],[826,311],[796,274],[766,241],[733,199],[727,148],[748,99],[793,63],[844,57],[880,54],[926,51],[974,54],[1016,57],[1049,118],[1034,166],[1001,205],[980,244],[962,280],[938,323],[926,359],[908,413],[935,464],[989,443],[1019,392],[1019,347],[1025,298],[1049,253],[1104,229],[1152,253],[1161,308],[1164,353],[1161,404],[1152,446],[1131,485],[1101,519],[1061,552],[1019,570],[974,585],[929,600],[886,603],[835,603],[790,597],[748,582],[709,561],[675,546],[627,525],[591,497],[561,476],[522,452],[485,425],[452,404],[410,377],[377,347],[350,317],[320,283],[265,262],[217,289],[208,344],[208,398],[214,443],[217,494],[199,537],[169,576],[139,621],[130,666],[118,724],[72,751],[27,709],[39,660],[42,615],[42,573],[51,534],[60,485],[66,443],[81,401],[96,362],[109,320]]
 };
 
-  /* ===== Kidney — built with the REVUP track builder =====
-   Paste this whole block into index_20.html at the very END of the file,
-   on the line just above the last closing script tag. Nothing else to change:
-   it registers itself in TRACKS and adds its own card to the track picker. */
-const TRACK_KIDNEY = {
-  key:"kidney",
-  name:"Kidney", spaces:69, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"",
-  subtitle:"Custom build",
-  tagline:"Hand-built fan board",
-  terrain:"parkland",
-  plate:{ x:239, y:311, w:300, h:112, rot:-2, title:"GRAND PRIX", sub:"MY CIRCUIT",
-          titleColor:"#173a2a", subColor:"#0f5132" },
-  panel:{x:1055,y:89}, podium:{x:658,y:357},
-  weatherTok:{x:1049,y:89,r:38},
-  corners:[ {at:1, limit:7}, {at:17, limit:4}, {at:35, limit:7}, {at:53, limit:3} ],
-  gravel:{ inner:[12,13,14,15,16,17], outer:[32,33,34,35,36,37] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[600,590],[564,592],[529,596],[494,600],[458,604],[423,607],[388,609],[352,608],[317,606],[281,602],[247,594],[212,584],[180,570],[149,553],[121,531],[99,503],[84,471],[82,436],[90,401],[107,371],[130,343],[156,319],[184,297],[214,279],[245,261],[277,245],[309,230],[342,216],[375,203],[408,191],[442,180],[477,171],[512,164],[547,160],[582,158],[618,158],[653,160],[688,164],[723,171],[758,180],[792,191],[825,203],[858,216],[891,230],[923,245],[955,261],[986,279],[1016,297],[1044,319],[1070,343],[1093,371],[1110,401],[1118,436],[1116,471],[1101,503],[1079,531],[1051,553],[1020,570],[988,584],[953,594],[919,602],[883,606],[848,608],[812,609],[777,607],[742,604],[706,600],[671,596],[636,592]]
-};
+ 
 
-
-
-/* ===== Theme template tracks — one per new landscape theme. These are
-   pure SVG-art boards (no photo): pick one, or copy the block and swap in
-   your own spacePts to skin a custom circuit with the same scenery. ===== */
-const TRACK_MIRAGE = {
-  key:"mirage",
-  name:"Mirage Valley", spaces:70, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"Desert Grand Prix · Mirage Valley",
-  subtitle:"Fuel haze & hairpins",
-  tagline:"Mirage Valley — dunes, mesas and a flat-out desert run, theme template board",
-  terrain:"desert",
-  plate:{ x:640, y:470, w:300, h:110, rot:-2, title:"DESERT GRAND PRIX", sub:"MIRAGE VALLEY",
-          titleColor:"#5a3413", subColor:"#8a4a16" },
-  panel:{x:600,y:300}, podium:{x:370,y:220},
-  weatherTok:{x:600,y:300,r:38},
-  corners:[ {at:2, limit:5}, {at:28, limit:3}, {at:38, limit:4}, {at:56, limit:5}, {at:68, limit:2} ],
-  gravel:{ inner:[], outer:[] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[1105,619],[1075,645],[1041,667],[1005,685],[967,699],[929,711],[889,721],[850,728],[810,734],[770,738],[730,740],[689,742],[649,742],[609,741],[569,739],[528,736],[488,732],[448,727],[408,721],[369,713],[329,705],[291,694],[252,682],[215,667],[178,649],[144,628],[113,603],[86,573],[67,537],[59,498],[60,458],[68,419],[77,379],[86,340],[94,301],[104,261],[119,224],[140,190],[167,160],[198,134],[232,113],[268,95],[306,82],[345,71],[384,64],[425,60],[465,58],[505,59],[545,63],[585,70],[624,80],[662,92],[699,108],[735,127],[768,150],[799,176],[826,206],[851,237],[876,269],[905,297],[937,321],[972,342],[1006,363],[1039,386],[1071,410],[1100,438],[1124,471],[1139,508],[1141,548],[1128,586]]
-};
-
-const TRACK_ACACIA = {
-  key:"acacia",
-  name:"Acacia Plains", spaces:72, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"Savannah Grand Prix · Acacia Plains",
-  subtitle:"Racing the golden grass",
-  tagline:"Acacia Plains — a sweeping lap around the watering hole, theme template board",
-  terrain:"savannah",
-  plate:{ x:430, y:430, w:300, h:110, rot:-2, title:"SAVANNAH GRAND PRIX", sub:"ACACIA PLAINS",
-          titleColor:"#4a3a10", subColor:"#7a5c14" },
-  panel:{x:640,y:290}, podium:{x:330,y:560},
-  weatherTok:{x:640,y:290,r:38},
-  corners:[ {at:10, limit:3}, {at:20, limit:4}, {at:39, limit:5}, {at:48, limit:2} ],
-  gravel:{ inner:[], outer:[] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[340,729],[303,721],[266,710],[230,698],[195,682],[161,664],[130,642],[102,616],[78,585],[63,550],[58,513],[65,475],[82,441],[105,410],[131,382],[157,354],[179,322],[192,286],[203,250],[218,214],[239,183],[266,155],[296,132],[330,113],[365,97],[401,84],[438,74],[475,67],[513,62],[552,59],[590,58],[628,59],[666,63],[704,68],[742,76],[779,86],[815,98],[850,114],[884,132],[916,153],[946,177],[973,204],[998,233],[1023,262],[1049,290],[1076,317],[1103,344],[1127,374],[1141,410],[1136,447],[1115,479],[1087,505],[1056,527],[1023,548],[991,568],[958,588],[926,609],[894,629],[861,649],[827,667],[792,683],[756,697],[720,709],[683,719],[645,727],[608,733],[570,738],[531,741],[493,742],[455,741],[416,739],[378,735]]
-};
-
-/* ===== Harbour City — built with the REVUP track builder =====
-   Paste this whole block into index_20.html at the very END of the file,
-   on the line just above the last closing script tag. Nothing else to change:
-   it registers itself in TRACKS and adds its own card to the track picker. */
-const TRACK_HARBOURCITY = {
-  key:"harbourcity",
-  name:"Harbour City", spaces:74, defaultLaps:2, heat:6, stress:3,
-  image:"harbourcity.png", imgW:1200, imgH:800,
-  eyebrow:"City Grand Prix · Harbour City street circuit",
-  subtitle:"Between the barriers",
-  tagline:"Harbour City — a downtown street circuit threading the blocks, theme template board",
-  terrain:"urban",
-  plate:{ x:450, y:150, w:0, h:0, rot:-2, title:"CITY GRAND PRIX", sub:"HARBOUR CITY",
-          titleColor:"#1c2430", subColor:"#28425e" },
-  panel:{x:0,y:0}, podium:{x:0,y:0},
-  weatherTok:{x:600,y:420,r:38},
-
-  /* Corners — `at` is the space the corner line sits BEFORE, `limit` the speed you
-     must be at or under crossing it. `chicane:n` groups consecutive corner lines
-     into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
-     the whole thing — a corner token modifies every line in it, a sector token
-     modifies the sector AFTER it. Each line is still checked separately. */
-  corners:[ {at:5, limit:2, chicane:1}, {at:6, limit:2, chicane:1}, {at:14, limit:5}, {at:27, limit:4}, {at:38, limit:3, chicane:2}, {at:41, limit:3, chicane:2}, {at:51, limit:5}, {at:65, limit:6} ],
-
-  /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
-     A space in both lists has gravel right across it. Rule: at the end of your turn
-     (step 9), if your car is on a gravel Spot you must pay 1 Heat if you have any in
-     the Engine; if the Engine is empty, ignore it. */
-  gravel:{ inner:[27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51], outer:[27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51] },
-
-  /* Tunnels — inclusive runs of Spaces (from > to means the run wraps past space 0).
-     Rule: while a car is on a tunnel Space its player cannot discard from hand, and
-     this beats any Event / Upgrade / Road Condition that would otherwise let them.
-     Cooling down (card goes to the Engine) and Scrap (card comes off the top of the
-     draw deck) are not discards, so both are still allowed inside a tunnel. */
-  tunnels:[  ],
-
-  legendsLine:7,
-  spacePts:[[557,72],[591,72],[627,72],[660,75],[696,84],[727,66],[765,98],[800,83],[834,79],[871,82],[907,85],[943,90],[977,102],[1006,123],[1024,154],[1033,190],[1038,226],[1046,259],[1049,302],[1052,344],[1052,380],[1049,425],[1046,461],[1040,504],[1034,552],[1028,573],[1013,603],[983,624],[947,639],[905,648],[868,651],[832,645],[796,645],[757,642],[721,636],[681,612],[666,594],[639,564],[615,540],[564,528],[534,537],[504,561],[485,588],[458,618],[428,630],[392,639],[362,642],[335,645],[298,645],[268,636],[238,618],[217,597],[202,576],[193,543],[187,504],[181,464],[175,416],[175,374],[175,335],[175,298],[181,259],[187,223],[190,187],[199,157],[220,124],[250,96],[283,90],[317,84],[353,81],[383,78],[412,76],[448,75],[484,74],[521,73]]
-};
-
-const TRACK_AURORA = {
-  key:"aurora",
-  name:"Aurora Ring", spaces:68, defaultLaps:2, heat:6, stress:3,
-  image:"", imgW:1200, imgH:800,
-  eyebrow:"Polar Grand Prix · Aurora Ring",
-  subtitle:"Ice in the mirrors",
-  tagline:"Aurora Ring — a plowed ribbon around the frozen lake, theme template board",
-  terrain:"arctic",
-  plate:{ x:200, y:556, w:290, h:100, rot:-2, title:"POLAR GRAND PRIX", sub:"AURORA RING",
-          titleColor:"#173048", subColor:"#1c4a6e" },
-  panel:{x:620,y:190}, podium:{x:880,y:540},
-  weatherTok:{x:620,y:190,r:38},
-  corners:[ {at:3, limit:5}, {at:14, limit:6}, {at:29, limit:3}, {at:45, limit:5}, {at:67, limit:2} ],
-  gravel:{ inner:[], outer:[] },
-  tunnels:[  ],
-  legendsLine:7,
-  spacePts:[[1134,495],[1116,532],[1090,564],[1058,589],[1023,610],[986,626],[947,638],[907,647],[866,653],[825,656],[784,657],[743,658],[703,660],[662,665],[622,674],[583,687],[545,700],[506,713],[467,725],[427,733],[386,739],[345,742],[304,741],[264,736],[224,727],[185,713],[149,694],[117,669],[89,639],[70,603],[59,564],[59,523],[67,483],[83,445],[104,410],[128,377],[154,345],[181,315],[208,284],[233,252],[258,219],[284,187],[311,157],[342,130],[376,106],[412,88],[450,73],[490,64],[531,59],[571,58],[612,62],[652,70],[692,81],[730,96],[767,113],[803,132],[839,152],[874,173],[910,193],[945,213],[980,235],[1014,258],[1047,282],[1077,310],[1103,341],[1124,376],[1138,415],[1142,455]]
-};
 
 /* ===== Britain — added with the REVUP track editor ===== */
 const TRACK_BRITAIN = {
@@ -930,11 +724,11 @@ const TRACK_BRITAIN = {
 /* ===== Route 66 — added with the REVUP track editor ===== */
 const TRACK_USA = {
   key:"usa",
-  name:"Root 69", spaces:69, defaultLaps:2, heat:6, stress:3,
+  name:"USA", spaces:69, defaultLaps:2, heat:6, stress:3,
   image:"tracks/USA .jpg", imgW:1200, imgH:800,
   eyebrow:"USA Touring Grand Prix",
   subtitle:"Race along Route 69",
-  tagline:"Whoever cums first, wins!",
+  tagline:"",
   terrain:"desert",
   plate:{ x:-53, y:7, w:300, h:224, rot:-2, title:"ROOT 69", sub:"Cum First",
           titleColor:"#173a2a", subColor:"#0f5132" },
@@ -1107,8 +901,49 @@ const TRACK_SOUTHAFRICA = {
   legendsLine:7,
   spacePts:[[639,715],[579,718],[525,715],[470,721],[422,730],[368,736],[314,739],[256,751],[202,754],[139,745],[84,709],[66,648],[63,594],[63,537],[72,476],[93,416],[145,368],[205,350],[259,380],[302,422],[335,470],[368,510],[404,564],[479,588],[531,522],[494,473],[431,434],[392,395],[353,353],[329,289],[317,235],[326,166],[350,118],[413,90],[479,69],[540,81],[588,121],[652,160],[672,208],[681,262],[678,320],[663,380],[642,434],[639,491],[651,555],[690,600],[763,618],[817,573],[844,510],[844,452],[847,386],[856,335],[892,280],[938,238],[998,223],[1061,256],[1070,317],[1055,395],[1052,449],[1085,507],[1113,555],[1134,621],[1125,681],[1076,727],[1013,745],[956,742],[905,736],[853,730],[790,721],[745,718],[693,718]]
    };
+
+    /* ===== Deutchland — built with the REVUP track builder =====
+   Paste this whole block into index_20.html at the very END of the file,
+   on the line just above the last closing script tag. Nothing else to change:
+   it registers itself in TRACKS and adds its own card to the track picker. */
+const TRACK_GERMANY = {
+  key:"germany",
+  name:"Deutchland", spaces:62, defaultLaps:2, heat:5, stress:3,
+  image:"", imgW:1200, imgH:800,
+  eyebrow:"Custom Grand Prix · My Circuit",
+  subtitle:"Custom build",
+  tagline:"Hand-built fan board",
+  terrain:"oval",
+  plate:{ x:-95, y:920, w:300, h:112, rot:-2, title:"GRAND PRIX", sub:"MY CIRCUIT",
+          titleColor:"#173a2a", subColor:"#0f5132" },
+  panel:{x:250,y:1259}, podium:{x:102,y:482},
+  weatherTok:{x:302,y:541,r:38},
+
+  /* Corners — `at` is the space the corner line sits BEFORE, `limit` the speed you
+     must be at or under crossing it. `chicane:n` groups consecutive corner lines
+     into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
+     the whole thing — a corner token modifies every line in it, a sector token
+     modifies the sector AFTER it. Each line is still checked separately. */
+  corners:[ {at:11, limit:5, mdx:127, mdy:18}, {at:23, limit:2, chicane:1}, {at:24, limit:2, chicane:1}, {at:37, limit:6, mdy:-3}, {at:45, limit:4, mdy:3}, {at:52, limit:4, mdx:-115, mdy:-54} ],
+
+  /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
+     A space in both lists has gravel right across it. Rule: at the end of your turn
+     (step 9), if your car is on a gravel Spot you must pay 1 Heat if you have any in
+     the Engine; if the Engine is empty, ignore it. */
+  gravel:{ inner:[], outer:[] },
+
+  /* Tunnels — inclusive runs of Spaces (from > to means the run wraps past space 0).
+     Rule: while a car is on a tunnel Space its player cannot discard from hand, and
+     this beats any Event / Upgrade / Road Condition that would otherwise let them.
+     Cooling down (card goes to the Engine) and Scrap (card comes off the top of the
+     draw deck) are not discards, so both are still allowed inside a tunnel. */
+  tunnels:[  ],
+
+  legendsLine:7,
+  spacePts:[[549,380],[507,383],[443,386],[410,383],[347,380],[298,371],[247,353],[196,323],[160,299],[115,248],[87,205],[99,127],[127,85],[190,55],[241,52],[298,52],[347,58],[398,67],[446,73],[482,82],[540,94],[591,112],[636,127],[690,133],[754,142],[793,172],[832,202],[871,232],[911,266],[947,296],[986,344],[1013,380],[1037,431],[1058,474],[1079,525],[1091,570],[1091,643],[1052,697],[983,718],[932,718],[892,724],[844,730],[790,733],[745,733],[669,715],[648,658],[678,591],[754,582],[802,591],[847,612],[898,630],[977,609],[1004,552],[986,495],[947,450],[892,422],[853,401],[802,380],[751,374],[703,368],[657,371],[597,374]]
+};
   
-const TRACKS = { usa:TRACK_USA, britain:TRACK_BRITAIN, italy:TRACK_ITALY, france:TRACK_FRANCE, mexico:TRACK_MEXICO, japan:TRACK_JAPAN, spain:TRACK_SPAIN, dutch:TRACK_DUTCH, southafrica:TRACK_SOUTHAFRICA, pukekohe:TRACK_PUKEKOHE, panorama:TRACK_PANORAMA, easterncreek:TRACK_EASTERN_CREEK, manfeild:TRACK_MANFEILD, montjuic:TRACK_MONTJUIC, silverrock:TRACK_SILVERROCK, monaco:TRACK_MONACO, kidney:TRACK_KIDNEY, mirage:TRACK_MIRAGE, acacia:TRACK_ACACIA, harbourcity:TRACK_HARBOUR, aurora:TRACK_AURORA };
+const TRACKS = { usa:TRACK_USA, britain:TRACK_BRITAIN, italy:TRACK_ITALY, france:TRACK_FRANCE, mexico:TRACK_MEXICO, japan:TRACK_JAPAN, spain:TRACK_SPAIN, dutch:TRACK_DUTCH, southafrica:TRACK_SOUTHAFRICA, germany:TRACK_GERMANY, pukekohe:TRACK_PUKEKOHE, panorama:TRACK_PANORAMA, easterncreek:TRACK_EASTERN_CREEK, manfeild:TRACK_MANFEILD, montjuic:TRACK_MONTJUIC, silverrock:TRACK_SILVERROCK, monaco:TRACK_MONACO };
 let TRACK = TRACK_PUKEKOHE;   // selected track (chosen on the track-select screen)
 let S = TRACK.spaces;
 
@@ -2022,18 +1857,15 @@ function showModeSelect(){
    builder with the tracks that DO exist locked in, so a stand-in can be chosen. */
 const CUP_RACES = 4;
 const CUPS = [
-  { key:"og", name:"V8 Cup", icon:"🏆",
+  { key:"og", name:"Base Game", icon:"🏆",
     blurb:"The original mother of all cups.",
     tracks:["usa","italy","britain","france"] },
-  { key:"expansion", name:"Are you not Rev-tertained?", icon:"🛞",
+  { key:"expansion", name:"First two Expansions", icon:"🛞",
     blurb:"The original mother of all cups.",
     tracks:["mexico","japan","spain","dutch"] },
-  { key:"shoey",  name:"Shoey Cup",     icon:"👟",
-    blurb:"Down-under road courses — the Kiwi flyers and the mountain.",
-    tracks:["pukekohe","easterncreek","manfeild","panorama"] },
-  { key:"pissed", name:"Pissed In Cup", icon:"🍺",
+  { key:"pissed", name:"Fan Made", icon:"🍺",
     blurb:"Street circuits, stone walls and no room for error.",
-    tracks:["silverrock","kidney","montjuic","monaco"] },
+    tracks:["silverrock","pukekohe","montjuic","monaco"] },
   { key:"custom", name:"Custom Cup",    icon:"🔧",
     blurb:"Build your own season — pick any four circuits, in any order.",
     tracks:null }
@@ -2508,17 +2340,9 @@ function showDeckSelect(next, back){
    Keyed by TRACK.key — add a line here when a new board joins the roster. */
 const TRACK_BRIEFS = {
   pukekohe:"New Zealand's home Grand Prix, a flowing road course wrapped around the Pukekohe horse-racing oval. Two quick infield corners set the lap up, then it's a long run round the outside to the fast right-hander onto the main straight.",
-  panorama:"Bathurst's mountain: a long climb away from Hell Corner, a narrow twisting run across the top, then the flat-out Conrod Straight into the two-part Chase chicane. There's gravel waiting over the crest if you carry too much in.",
-  easterncreek:"Sydney Motorsport Park — the long Brabham Straight feeds a fast Turn 1, a slow hairpin waits at the far end, and the tight closing complex punishes anyone still in top gear.",
-  manfeild:"The Circuit Chris Amon at Feilding — flat, fast farmland with a hairpin at Turn 1, doubling-back esses through the middle and a long back straight to cool the engine on.",
   montjuic:"A short parkland blast of only 54 spaces. The corners arrive quickly and there is very little road between them in which to siphon the heat back out.",
   silverrock:"The longest board on the roster at 89 spaces. Plenty of straight-line running to build a lead — and just as much room to burn your tank doing it.",
-  monaco:"One hundred spaces between the barriers. A tight, unforgiving street lap where a single overcooked corner is the end of your afternoon.",
-  kidney:"A hand-built parkland lap with a kink folded into the middle of it. Nothing exotic — a good honest circuit to learn the gearbox on.",
-  mirage:"Dunes, mesas and a long flat-out desert run. Bank your speed on the straight, because the corners come in a hurry at the far end of it.",
-  acacia:"A sweeping savannah lap around the watering hole. Fast, open and forgiving — the place to find out how far a nitro will really carry you.",
-  harbourcity:"A downtown street circuit threaded through the city blocks. Walls close, corners square, and nowhere at all to hide a mistake.",
-  aurora:"A plowed ribbon around a frozen lake. Long, cold sweeps that flatter a brave entry — right up until the one corner that doesn't.",
+  monaco:"One hundred spaces between the barriers. A tight, unforgiving street lap where a single overcooked corner is the end of your race.",
   britain:"The base-game British board. Compact and technical, with a fiddly infield section and a fast run down to the flag.",
   usa:"The base-game American board and the best place to start. Long desert straights, a handful of corners, and room to make your mistakes in.",
   italy:"The shortest lap in the garage, run over three laps. The flag comes round fast and you are never far from traffic.",
@@ -2527,7 +2351,8 @@ const TRACK_BRIEFS = {
   japan:"A mountain lap that flows from one sweeper straight into the next. Commit early: the corner lines come up in quick succession.",
   spain:"109 spaces run as a single lap — the longest one-lap race on the roster, and a proper endurance run through the streets.",
   dutch:"A short city lap run three times over. Corner after corner, with barely a straight long enough to catch your breath.",
-  southafrica:"test."
+  southafrica:"test.",
+  germany:"test"
 };
 function trackBrief(t){
   return TRACK_BRIEFS[t.key] || t.tagline || t.eyebrow || t.subtitle || "A hand-built fan board.";
