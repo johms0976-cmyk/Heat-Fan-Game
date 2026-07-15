@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#17141b">
-<title>REVUP - Race, React, Dominate</title>
+<title>HEAT - Pedal to the Metal!</title>
 <style>
 :root{
   --tarmac:#17141b; --panel:#221d2b; --panel2:#2c2536;
@@ -1821,13 +1821,13 @@ const CHAMP_POINTS = [9,6,4,3,2,1,0,0];   // podium points by finishing position
 function showModeSelect(){
   const el=$("#setup"); el.onclick=null; el.style.display="flex"; el.scrollTop=0;
   el.innerHTML=`<div class="sheet">
-    <h1>REVUP <span>· Race, React, Dominate</span></h1>
+    <h1>Heat <span>· Pedal to the Metal</span></h1>
     <div class="tag">A fan build of the 1960s Grand Prix card game. Pick your challenge.</div>
     <div class="tracklist" style="margin-top:6px">
       <button class="trackcard" id="mode-single">
         <div class="tc-art" style="display:flex;align-items:center;justify-content:center;font-size:40px">🏁</div>
         <div class="tc-body"><div class="tc-name">Single Race</div>
-          <div class="tc-meta">One circuit, lights-out to flag. Optional chop shop &amp; weather.</div></div>
+          <div class="tc-meta">One circuit, lights-out to flag. Optional Garage &amp; weather.</div></div>
         <div class="tc-go">Go ▸</div>
       </button>
       <button class="trackcard" id="mode-champ">
@@ -1897,7 +1897,7 @@ function showCupSelect(){
     </button>`;
   };
   el.innerHTML=`<div class="sheet">
-    <h1>REVUP <span>· choose your cup</span></h1>
+    <h1>HEAT <span>· choose your cup</span></h1>
     <div class="tag">Every cup is four races. Points after the finale crown the champion.</div>
     <div class="tracklist">${CUPS.map(card).join("")}</div>
     <div class="btnrow" style="margin-top:14px"><button class="act secondary" id="cupback">◂ Back</button></div>
@@ -1944,7 +1944,7 @@ function showCupBuilder(cup){
       </button>`;
     }).join("");
     el.innerHTML=`<div class="sheet">
-      <h1>REVUP <span>· ${cup.name.toLowerCase()}</span></h1>
+      <h1>HEAT <span>· ${cup.name.toLowerCase()}</span></h1>
       <div class="tag">${missing.length
         ? `${missing.map(trackName).join(" & ")} isn't built yet — pick a stand-in to complete the cup.`
         : "Tap four circuits. The order you tap them is the order you race them."}</div>
@@ -1997,7 +1997,7 @@ function showChampSetup(){
   };
   const sel = (a,b) => a===b ? ' class="sel"' : '';
   el.innerHTML=`<div class="sheet">
-    <h1>REVUP <span>· championship rules</span></h1>
+    <h1>HEAT <span>· championship rules</span></h1>
     <div class="tag">${cup.name} — ${cup.order.map(trackName).join(" → ")}. Most points after the finale is champion.</div>
     <div class="optgroup"><div class="olbl">Rival cars — up to 7, for an 8-car grid</div>
       <div class="seg" id="segbots" style="gap:5px">
@@ -2074,7 +2074,7 @@ function showChampSummary(){
     </div>`;
   }).join("");
   el.innerHTML=`<div class="sheet">
-    <h1>REVUP <span>· ${esc(cup.name.toLowerCase())}</span></h1>
+    <h1>HEAT <span>· ${esc(cup.name.toLowerCase())}</span></h1>
     <div class="tag">Four races, one title. Points after the finale crown the champion.</div>
     <div class="optgroup"><div class="olbl">Season calendar</div>${rounds}</div>
     <div class="optgroup"><div class="olbl">Your rig — it carries its Mods all season</div>
@@ -2238,10 +2238,10 @@ function deckStatPills(c){
   const pills = [
     {t:`Deck ${c.deck.map((n,i)=>n+"\u00d7"+(i+1)).join(" ")}`},
     {t:`Speed total ${tot}`,  k: tot>30 ? "up" : tot<30 ? "dn" : ""},
-    {t:`${tank}-can tank`,    k: (c.tank||0)>0 ? "up" : (c.tank||0)<0 ? "dn" : ""},
-    {t: la ? `Hazard limits ${sign(la)}` : "Standard hazard limits", k: la>0?"up" : la<0?"dn" : ""},
+    {t:`${tank}-Heat`,    k: (c.tank||0)>0 ? "up" : (c.tank||0)<0 ? "dn" : ""},
+    {t: la ? `Corner limits ${sign(la)}` : "Standard corner limits", k: la>0?"up" : la<0?"dn" : ""},
     {t:`Slipstream ${c.slipBase}`, k: c.slipBase>2 ? "up" : ""},
-    {t:`Siphon ${Object.entries(c.cool||{}).map(([g,v])=>"G"+g+"\u00b7"+v).join(" ")||"\u2014"}`}
+    {t:`Cool ${Object.entries(c.cool||{}).map(([g,v])=>"G"+g+"\u00b7"+v).join(" ")||"\u2014"}`}
   ];
   if(c.panic)     pills.push({t:`${sign(c.panic)} panic card`,      k: c.panic>0 ? "dn":"up"});
   if(c.spinPanic) pills.push({t:`Wipeout +${c.spinPanic} panic`,    k:"dn"});
@@ -2379,7 +2379,7 @@ function showTrackSelect(){
   };
   el.innerHTML = `
     <div class="sheet tspicker">
-      <h1>REVUP <span>· choose your circuit</span></h1>
+      <h1>HEAT <span>· choose your circuit</span></h1>
       <div class="tag">${Object.keys(TRACKS).length} hand-built fan boards. Scroll the list — pick where the lights go out.</div>
       <div class="tracklist">
         ${Object.values(TRACKS).map(card).join("")}
@@ -2450,7 +2450,7 @@ function showHotseatSetup(){
     if(st.laps!==1) st.laps = gpLaps();     // GP distance follows whichever circuit is loaded
     const takenBy = i => st.players.slice(0,st.count).findIndex((p,j)=>j!==i && p.color===st.players[i].color);
     el.innerHTML=`<div class="sheet">
-      <h1>REVUP <span>· pass &amp; play — ${TRACK.name}</span></h1>
+      <h1>HEAT <span>· pass &amp; play — ${TRACK.name}</span></h1>
       <div class="tag">2–4 drivers on this device. Enter a name and pick a car colour each — the game tells you when to pass it on.</div>
       <div class="optgroup"><div class="olbl">Local drivers</div>
         <div class="seg" id="hscount">${[2,3,4].map(v=>`<button data-v="${v}"${v===st.count?' class="sel"':''}>${v}</button>`).join("")}</div></div>
@@ -2614,7 +2614,7 @@ function showSetup(){
     diff:     G.difficulty != null ? G.difficulty : 0,
     garage:   G.garage     || "none",
     upglvl:   G.upgLevel   || "reg",
-    weather:  G.weatherPick|| "none"
+    weather:  G.weatherPick|| "random"
   };
   const sel = (a,b) => a===b ? ' class="sel"' : '';
   el.innerHTML = `
@@ -2671,8 +2671,8 @@ function showSetup(){
         $("#garageblurb").textContent = g==="none"
           ? "Closed: you run the 3 stock parts your rig rolled out of the yard with."
           : g==="draft"
-          ? "Scav run: once the grid is set, every driver picks 3 Mods from a shared scrap heap (snake order by grid)."
-          : "Scrap pull: 3 random Mods bolted onto each car — the quick-start shortcut.";
+          ? "Garage Draft: once the grid is set, every driver picks 3 Mods from a shared scrap heap (snake order by grid)."
+          : "Garage Random: 3 random Mods bolted onto each car — the quick-start shortcut.";
       }
     });
   }
@@ -2709,7 +2709,7 @@ const DIFF_NAMES = ["Davidson","Rookie","Pro","Legend"];
 function weatherLabel(){
   if(G.weatherPick==="random") return "🎲 Random draw";
   const w = WEATHER_TYPES[G.weatherKey];
-  return w && G.weatherKey!=="none" ? `${w.icon} ${w.name}` : "Dry — no weather";
+  return w && G.weatherKey!=="random" ? `${w.icon} ${w.name}` : "Dry — no weather";
 }
 function garageLabel(){
   const tier = G.upgLevel==="all" ? "rust + chrome" : "rust";
