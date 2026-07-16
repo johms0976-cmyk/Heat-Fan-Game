@@ -1153,7 +1153,7 @@ const TRACK_JARAMA = defineTrack({
      A space in both lists has gravel right across it. Rule: at the end of your turn
      (step 9), if your car is on a gravel Spot you must pay 1 Heat if you have any in
      the Engine; if the Engine is empty, ignore it. */
-  gravel:{ inner:[], outer:[] },
+  gravel:{ inner:[20,21,22,23,24,26,27,28,30,54,55,56,59,60,61,62,63], outer:[15,16,17,18,19,22,23,30,31,32,33,57,58,59,60,61,62,63,64,65] },
 
   /* Tunnels — inclusive runs of Spaces (from > to means the run wraps past space 0).
      Rule: while a car is on a tunnel Space its player cannot discard from hand, and
@@ -1357,7 +1357,7 @@ const LEGEND_CARDS = [
      xheat    this is an Extra Heat card (rides in the deck, +1 heat pool)
    If any icon on your printed cards differs, fix it here — one line per card. */
 const UPGRADE_CARDS = [
-  {id:1,  name:"4 Wheel Drive",  v:4, plus:1},
+  {id:1,  name:"4 Wheel Drive",  v:4, plus:1, art:"assets/cards/upgrades/id1.png"},
   {id:2,  name:"4 Wheel Drive",  plus:2},
   {id:3,  name:"4 Wheel Drive",  plus:1, cool:3},
   {id:4,  name:"Body",           v:3, stress:2},
@@ -1417,7 +1417,8 @@ const UPGRADE_CARDS = [
   {id:58, name:"Front Wing",     v:3, draft:1, scrap:3, limit:1, adv:true},
   {id:59, name:"Front Wing",     v:4, draft:1, refresh:true, scrap:4, adv:true},
   {id:60, name:"Front Wing",     v:6, draft:2, heat:1, adv:true},
-  {id:61, name:"Sliding Skirts", plus:1, xslip:1, limit:1, stress:1, adv:true}
+  {id:61, name:"Sliding Skirts", plus:1, xslip:1, limit:1, stress:1, adv:true},
+  {id:62, name:"Sliding Skirts", plus:2, xslip:1, limit:1, stress:1, adv:true},
 ];
 const upgradeById = id => UPGRADE_CARDS.find(u=>u.id===id);
 /* expected speed of an upgrade (for bot valuation & previews) */
