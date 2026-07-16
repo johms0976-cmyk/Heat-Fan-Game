@@ -692,8 +692,8 @@ const TRACK_MONTJUIC = {
 
 
 /* ===== Silverrock — added with the REVUP track editor ===== */
-const TRACK_SILVERROCK = {
-  key:"silverrock",
+const TRACK_SILVERSTONE = {
+  key:"silverstone",
   name:"Silverstone", spaces:89, defaultLaps:2, heat:6, stress:3,
   image:"tracks/Silverrock.jpeg", imgW:1200, imgH:800,
   eyebrow:"British Grand Prix · Silverstone",
@@ -1045,7 +1045,7 @@ const TRACK_ZANDVOORT = {
   spacePts:[[467,715],[419,724],[371,733],[329,745],[277,757],[238,766],[187,775],[120,747],[109,698],[154,643],[208,636],[262,630],[317,609],[365,606],[422,621],[482,609],[504,552],[449,516],[401,495],[353,465],[314,434],[274,413],[223,395],[166,380],[124,362],[81,323],[66,266],[90,217],[133,190],[187,175],[235,169],[286,154],[326,133],[374,112],[410,94],[458,70],[504,55],[555,49],[600,46],[657,46],[699,49],[751,61],[796,85],[832,115],[865,163],[883,199],[908,248],[947,284],[980,308],[1016,350],[1034,395],[1043,444],[1028,504],[1001,537],[962,573],[926,597],[877,621],[829,633],[784,643],[739,652],[693,661],[648,673],[603,685],[555,694],[510,703]]
 }; 
   
-const TRACKS = { usa:TRACK_USA, britain:TRACK_BRITAIN, italy:TRACK_ITALY, france:TRACK_FRANCE, mexico:TRACK_MEXICO, japan:TRACK_JAPAN, spain:TRACK_SPAIN, dutch:TRACK_DUTCH, southafrica:TRACK_SOUTHAFRICA, germany:TRACK_GERMANY, pukekohe:TRACK_PUKEKOHE, montjuic:TRACK_MONTJUIC, silverrock:TRACK_SILVERROCK, monaco:TRACK_MONACO, zandvoort:TRACK_ZANDVOORT};
+const TRACKS = { usa:TRACK_USA, britain:TRACK_BRITAIN, italy:TRACK_ITALY, france:TRACK_FRANCE, mexico:TRACK_MEXICO, japan:TRACK_JAPAN, spain:TRACK_SPAIN, dutch:TRACK_DUTCH, southafrica:TRACK_SOUTHAFRICA, germany:TRACK_GERMANY, pukekohe:TRACK_PUKEKOHE, montjuic:TRACK_MONTJUIC, silverstone:TRACK_SILVERSTONE, monaco:TRACK_MONACO, zandvoort:TRACK_ZANDVOORT};
 let TRACK = TRACK_PUKEKOHE;   // selected track (chosen on the track-select screen)
 let S = TRACK.spaces;
 
@@ -1577,13 +1577,13 @@ const VEHICLE_CLASSES = [
     tag:"Base Game. The balanced baseline.",
     deck:[3,3,3,3], tank:0, panic:0, limitAdj:0, slipBase:2, spinPanic:0,
     cool:{1:3, 2:1},
-    starters:[ {name:"Coast", v:0}, {name:"Full Send", v:5}, {xheat:true} ],
+    starters:[ {name:"Coast", v:0}, {name:"DRS", v:5}, {xheat:true} ],
     blurb:"Even deck (3× 1–4) · 6-can tank · standard hazard limits · Cooling 3/1 in gears 1–2. Drives exactly like the classic game." },
   { key:"v8", icon:"🛻", name:"V8 Supercar", art:"assets/avatars/decks/warlord.png",
     tag:"Fan Made - Monstrous on straights",
     deck:[2,2,4,4], tank:+2, panic:0, limitAdj:-1, slipBase:2, spinPanic:0,
     cool:{1:2},
-    starters:[ {name:"Ram Plate", v:5, scrap:1}, {name:"Grease Monkey", v:0, cool:1}, {xheat:true} ],
+    starters:[ {name:"Fang It", v:5, scrap:1}, {name:"Grease Monkey", v:0, cool:1}, {xheat:true} ],
     blurb:"Fast deck (2×1 2×2 4×3 4×4, total 34) · big 8-can tank · corner limits are 1 LOWER for you · weak cooling (2/0). Over Heat or slow down — you can't do neither." },
   { key:"bike", icon:"🏍️", name:"MotoGP", art:"assets/avatars/decks/viper.png",
     tag:"Fan Made - Corners like a dream.",
@@ -1591,8 +1591,8 @@ const VEHICLE_CLASSES = [
     cool:{1:3, 2:1},
     starters:[ {name:"Lean In", v:0, limit:1}, {name:"Wheelie", v:4, heat:1}, {xheat:true} ],
     blurb:"Slow deck (4×1 3×2 3×3 2×4, total 27) · tiny 4 heat · corner limits are 1 HIGHER for you · slipstream 3 spaces · Spinouts deal +1 extra Stress." },
-  { key:"buggy", icon:"🚜", name:"Scav Buggy", art:"assets/avatars/decks/buggy.png",
-    tag:"Held together with wire and spite. Never fast, never stranded.",
+  { key:"buggy", icon:"🚜", name:"RallyCross", art:"assets/avatars/decks/buggy.png",
+    tag:"Fan Made - Gravel has no impact.",
     deck:[3,3,3,3], tank:-1, panic:+1, limitAdj:0, slipBase:2, spinPanic:0,
     cool:{1:3, 2:1, 3:1, 4:1},
     starters:[ {name:"Jury Rig", v:0, salvage:2}, {name:"Bolt-On Turbo", v:5, heat:1}, {xheat:true} ],
@@ -2103,14 +2103,14 @@ function showModeSelect(){
 const CUP_RACES = 4;
 const CUPS = [
   { key:"og", name:"Base Game", icon:"🏆",
-    blurb:"The original mother of all cups.",
+    blurb:"Race through the Base Game.",
     tracks:["usa","italy","britain","france"] },
   { key:"expansion", name:"First two Expansions", icon:"🛞",
     blurb:"The original mother of all cups.",
     tracks:["mexico","japan","spain","dutch"] },
   { key:"pissed", name:"Fan Made", icon:"🍺",
     blurb:"Street circuits, stone walls and no room for error.",
-    tracks:["silverrock","pukekohe","montjuic","monaco"] },
+    tracks:["silverstone","pukekohe","montjuic","monaco"] },
   { key:"custom", name:"Custom Cup",    icon:"🔧",
     blurb:"Build your own season — pick any four circuits, in any order.",
     tracks:null }
@@ -2645,7 +2645,7 @@ function showDeckSelect(next, back){
 const TRACK_BRIEFS = {
   pukekohe:"New Zealand's home Grand Prix, a flowing road course wrapped around the Pukekohe horse-racing oval. Two quick infield corners set the lap up, then it's a long run round the outside to the fast right-hander onto the main straight.",
   montjuic:"A short parkland blast of only 54 spaces. The corners arrive quickly and there is very little road between them in which to Cooling the heat back out.",
-  silverrock:"The longest board on the roster at 89 spaces. Plenty of straight-line running to build a lead — and just as much room to burn your tank doing it.",
+  silverstone:"Plenty of straight-line running to build a lead — and just as much room to overheat doing it.",
   monaco:"One hundred spaces between the barriers. A tight, unforgiving street lap where a single overcooked corner is the end of your race.",
   britain:"The base-game British board. Compact and technical, with a fiddly infield section and a fast run down to the flag.",
   usa:"The base-game American board and the best place to start. Long desert straights, a handful of corners, and room to make your mistakes in.",
@@ -2657,7 +2657,7 @@ const TRACK_BRIEFS = {
   dutch:"A short city lap run three times over. Corner after corner, with barely a straight long enough to catch your breath.",
   southafrica:"test.",
   germany:"test.",
-  zandvoort:"test."
+  zandvoort:"Popular for its fast, sweeping corners. Watch out for the hairpin!"
   
 };
 function trackBrief(t){
