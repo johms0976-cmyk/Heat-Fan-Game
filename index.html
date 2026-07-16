@@ -850,7 +850,8 @@ const TRACK_SPAIN = {
           titleColor:"#f7ce46", subColor:"#e22400" },
   panel:{x:58,y:692}, podium:{x:965,y:195},
   weatherTok:{x:100,y:698,r:38},
-  corners:[ {at:11, limit:5}, {at:15, limit:4}, {at:29, limit:4, chicane:1}, {at:32, limit:4, chicane:1}, {at:44, limit:2}, {at:65, limit:5}, {at:85, limit:2}, {at:92, limit:3}, {at:95, limit:4, chicane:2}, {at:98, limit:4, chicane:2}, {at:103, limit:3} ],
+  corners:[ {at:11, limit:5, mdx:-9}, {at:15, limit:4, mdx:-15, mdy:-6}, {at:29, limit:4, chicane:1, mdx:3}, {at:32, limit:4, chicane:1, mdx:27, mdy:99}, {at:44, limit:2, mdx:99, mdy:3}, {at:65, limit:5, mdx:-69, mdy:87}, {at:85, limit:2, mdx:-6, mdy:-15}, {at:92, limit:3, mdx:3, mdy:-3}, {at:95, limit:4, chicane:2, mdx:-51, mdy:-100}, {at:98, limit:4, chicane:2, mdy:-6}, {at:103, limit:3, mdx:6, mdy:-15} ],
+
   gravel:{ inner:[], outer:[] },
   tunnels:[ {from:16, to:23}, {from:37, to:41}, {from:45, to:48}, {from:61, to:70}, {from:79, to:87} ],
   legendsLine:7,
@@ -870,7 +871,7 @@ const TRACK_DUTCH = {
           titleColor:"#ff6a00", subColor:"#3a87fe" },
   panel:{x:534,y:457}, podium:{x:1089,y:554},
   weatherTok:{x:531,y:457,r:38},
-  corners:[ {at:9, limit:5, chicane:1}, {at:13, limit:5, chicane:1}, {at:16, limit:3}, {at:26, limit:8}, {at:34, limit:4} ],
+  corners:[ {at:9, limit:5, chicane:1, mdx:124, mdy:3}, {at:13, limit:5, chicane:1, mdx:90, mdy:75}, {at:16, limit:3, mdx:-3, mdy:-9}, {at:26, limit:8, mdx:6, mdy:112}, {at:34, limit:4, mdx:12, mdy:-9} ],
   gravel:{ inner:[], outer:[] },
   tunnels:[  ],
   legendsLine:7,
@@ -899,7 +900,8 @@ const TRACK_SOUTHAFRICA = {
      into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
      the whole thing — a corner token modifies every line in it, a sector token
      modifies the sector AFTER it. Each line is still checked separately. */
-  corners:[ {at:11, limit:4}, {at:18, limit:3}, {at:34, limit:6}, {at:45, limit:5}, {at:55, limit:2}, {at:62, limit:4} ],
+   corners:[ {at:11, limit:4, mdx:103, mdy:-36}, {at:18, limit:3, mdx:51, mdy:-103}, {at:24, limit:2, mdx:96, mdy:78}, {at:34, limit:6, mdx:27, mdy:106}, {at:45, limit:5, mdx:100, mdy:-63}, {at:55, limit:2, mdx:27, mdy:-12}, {at:62, limit:4, mdx:-106, mdy:-18} ],
+
 
   /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
      A space in both lists has gravel right across it. Rule: at the end of your turn
