@@ -737,10 +737,13 @@ const TRACK_MONACO = {
  
 
 
-/* ===== Britain — added with the REVUP track editor ===== */
+/* ===== The Palace — built with the REVUP track builder =====
+   Paste this whole block into index_20.html at the very END of the file,
+   on the line just above the last closing script tag. Nothing else to change:
+   it registers itself in TRACKS and adds its own card to the track picker. */
 const TRACK_BRITAIN = {
   key:"britain",
-  name:"Great Britain", spaces:62, defaultLaps:2, heat:6, stress:3,
+  name:"The Palace", spaces:63, defaultLaps:2, heat:6, stress:3,
   image:"tracks/Britain.jpg", imgW:1200, imgH:800,
   eyebrow:"British Grand Prix",
   subtitle:"Base Game",
@@ -750,7 +753,13 @@ const TRACK_BRITAIN = {
           titleColor:"#173a2a", subColor:"#0f5132" },
   panel:{x:123,y:481}, podium:{x:96,y:96},
   weatherTok:{x:112,y:478,r:38},
-   corners:[ {at:15, limit:10, bx:1109, by:34}, {at:30, limit:6, bx:863, by:770}, {at 38, limit:5}, {at:44, limit:4, bx:474, by:405}, {at:49, limit:3, bx:663, by:627} ],
+
+  /* Corners — `at` is the space the corner line sits BEFORE, `limit` the speed you
+     must be at or under crossing it. `chicane:n` groups consecutive corner lines
+     into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
+     the whole thing — a corner token modifies every line in it, a sector token
+     modifies the sector AFTER it. Each line is still checked separately. */
+  corners:[ {at:15, limit:10, bx:1108, by:34}, {at:30, limit:6, bx:865, by:769}, {at:37, limit:5, bx:892, by:349}, {at:43, limit:4, bx:474, by:405}, {at:49, limit:3, bx:659, by:626} ],
 
   /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
      A space in both lists has gravel right across it. Rule: at the end of your turn
@@ -766,9 +775,8 @@ const TRACK_BRITAIN = {
   tunnels:[  ],
 
   legendsLine:7,
-  spacePts:[[418,88],[468,68],[520,54],[575,55],[612,55],[674,56],[714,55],[765,56],[812,55],[859,55],[903,55],[954,55],[1000,54],[1052,67],[1099,101],[1129,145],[1140,198],[1138,256],[1133,299],[1125,351],[1118,400],[1104,443],[1091,490],[1068,540],[1050,579],[1021,624],[992,660],[947,705],[901,725],[830,710],[798,677],[808,520],[834,473],[853,422],[840,374],[802,342],[749,342],[706,375],[659,402],[604,403],[550,411],[517,451],[515,501],[547,539],[598,560],[650,574],[695,600],[713,652],[663,673],[615,663],[565,640],[516,616],[468,591],[420,565],[376,532],[343,489],[324,439],[312,385],[309,331],[316,277],[330,224],[354,175], [378,126]]
+  spacePts:[[371,127],[419,88],[470,61],[525,52],[570,55],[618,52],[666,52],[718,52],[760,52],[814,52],[850,55],[905,58],[950,55],[1001,55],[1052,64],[1101,97],[1134,145],[1140,199],[1140,251],[1134,299],[1125,350],[1116,398],[1107,444],[1091,486],[1073,534],[1046,579],[1019,618],[989,658],[953,694],[898,724],[844,715],[793,667],[790,612],[802,555],[817,513],[841,456],[856,401],[814,353],[766,344],[696,374],[657,401],[606,398],[537,416],[507,465],[528,528],[585,558],[630,561],[688,591],[718,646],[657,673],[591,652],[558,636],[501,609],[461,585],[413,558],[371,525],[338,480],[317,434],[308,380],[302,332],[311,281],[329,223],[341,187]]
 };
-
 
 /* ===== Route 66 — added with the REVUP track editor ===== */
 const TRACK_USA = {
