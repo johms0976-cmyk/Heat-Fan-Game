@@ -640,7 +640,7 @@ const TRACK_PUKEKOHE = {
           titleColor:"#173a2a", subColor:"#0f5132" },
   panel:{x:560,y:290}, podium:{x:367,y:200},
   weatherTok:{x:668,y:257,r:38},
-  corners:[ {at:9, limit:3, mdx:-12, mdy:-9}, {at:15, limit:3, mdx:-48, mdy:-91}, {at:32, limit:7, mdx:-27, mdy:9}, {at:57, limit:4, mdx:-103, mdy:-3} ],
+   corners:[ {at:9, limit:3, bx:135, by:420}, {at:15, limit:3, bx:135, by:701}, {at:32, limit:7, bx:83, by:23}, {at:57, limit:4, bx:1099, by:257} ],
   gravel:{ inner:[], outer:[] },
   tunnels:[  ],
   legendsLine:7,
@@ -672,8 +672,7 @@ const TRACK_MONTJUIC = {
      into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
      the whole thing — a corner token modifies every line in it, a sector token
      modifies the sector AFTER it. Each line is still checked separately. */
-  corners:[ {at:9, limit:2, mdx:-21, mdy:12}, {at:14, limit:3}, {at:20, limit:4, mdx:9, mdy:-6}, {at:28, limit:3, mdx:12, mdy:15}, {at:36, limit:6, mdx:-3, mdy:-106} ],
-
+    corners:[ {at:9, limit:2, bx:155, by:51}, {at:14, limit:3, bx:363, by:364}, {at:20, limit:4, bx:50, by:311}, {at:28, limit:3, bx:232, by:729}, {at:36, limit:6, bx:708, by:595} ],
   /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
      A space in both lists has gravel right across it. Rule: at the end of your turn
      (step 9), if your car is on a gravel Spot you must pay 1 Heat if you have any in
@@ -705,7 +704,7 @@ const TRACK_SILVERROCK = {
           titleColor:"#173a2a", subColor:"#0f5132" },
   panel:{x:801,y:255}, podium:{x:348,y:249},
   weatherTok:{x:811,y:261,r:38},
-  corners:[ {at:6, limit:7}, {at:19, limit:5}, {at:33, limit:6}, {at:44, limit:5}, {at:60, limit:3}, {at:73, limit:4}, {at:78, limit:2} ],
+ corners:[ {at:6, limit:7, bx:1153, by:641}, {at:19, limit:5, bx:577, by:715}, {at:33, limit:6, bx:88, by:390}, {at:44, limit:5, bx:334, by:93}, {at:60, limit:3, bx:671, by:580}, {at:73, limit:4, bx:976, by:245}, {at:78, limit:2, bx:798, by:101} ],
   gravel:{ inner:[], outer:[] },
   tunnels:[  ],
   legendsLine:7,
@@ -728,7 +727,7 @@ const TRACK_MONACO = {
           titleColor:"#173a2a", subColor:"#0f5132" },
   panel:{x:1079,y:728}, podium:{x:405,y:517},
   weatherTok:{x:1115,y:731,r:38},
-  corners:[ {at:6, limit:3}, {at:21, limit:7}, {at:29, limit:4}, {at:36, limit:3}, {at:44, limit:2}, {at:50, limit:3}, {at:78, limit:5}, {at:89, limit:2} ],
+  corners:[ {at:6, limit:3, bx:234, by:24}, {at:21, limit:7, bx:799, by:518}, {at:29, limit:4, bx:674, by:112}, {at:36, limit:3, bx:1085, by:55}, {at:44, limit:2, bx:868, by:464}, {at:50, limit:3, bx:1087, by:274}, {at:78, limit:5, bx:327, by:219}, {at:89, limit:2, bx:75, by:701} ],
   gravel:{ inner:[], outer:[] },
   tunnels:[  ],
   legendsLine:7,
@@ -824,7 +823,7 @@ const TRACK_FRANCE = {
           titleColor:"#173a2a", subColor:"#0f5132" },
   panel:{x:1094,y:158}, podium:{x:99,y:569},
   weatherTok:{x:1056,y:158,r:38},
-    corners:[ {at:12, limit:5, bx:50, by:361}, {at:20, limit:2, bx:466, by:68}, {at:27, limit:4, bx:325, by:491}, {at:39, limit:3, bx:729, by:54}, {at:47, limit:4, bx:1143, by:327} ],
+  corners:[ {at:12, limit:5, bx:50, by:361}, {at:20, limit:2, bx:466, by:68}, {at:27, limit:4, bx:325, by:491}, {at:39, limit:3, bx:729, by:54}, {at:47, limit:4, bx:1143, by:327} ],
   gravel:{ inner:[], outer:[] },
   tunnels:[  ],
   legendsLine:7,
@@ -936,7 +935,7 @@ const TRACK_SOUTHAFRICA = {
      into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
      the whole thing — a corner token modifies every line in it, a sector token
      modifies the sector AFTER it. Each line is still checked separately. */
-   corners:[ {at:11, limit:4, mdx:103, mdy:-36}, {at:18, limit:3, mdx:51, mdy:-103}, {at:24, limit:2, mdx:96, mdy:78}, {at:34, limit:6, mdx:27, mdy:106}, {at:45, limit:5, mdx:100, mdy:-63}, {at:55, limit:2, mdx:27, mdy:-12}, {at:62, limit:4, mdx:-106, mdy:-18} ],
+   corners:[ {at:11, limit:4, bx:124, by:658}, {at:18, limit:3, bx:259, by:311}, {at:24, limit:2, bx:554, by:598}, {at:34, limit:6, mdx:27, mdy:106}, {at:45, limit:5, bx:731, by:551}, {at:55, limit:2, bx:1082, by:178}, {at:62, limit:4, bx:1079, by:641} ],
 
 
   /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
@@ -978,7 +977,7 @@ const TRACK_GERMANY = {
      into a chicane: same speed limit, blue kerbs, and ONE Road Condition token for
      the whole thing — a corner token modifies every line in it, a sector token
      modifies the sector AFTER it. Each line is still checked separately. */
-  corners:[ {at:11, limit:5, mdx:127, mdy:18}, {at:23, limit:2, chicane:1}, {at:24, limit:2, chicane:1}, {at:37, limit:6, mdy:-3}, {at:45, limit:4, mdy:3}, {at:52, limit:4, mdx:-115, mdy:-54} ],
+  corners:[ {at:11, limit:5, bx:162, by:178}, {at:23, limit:2, chicane:1, bx:642, by:195}, {at:24, limit:2, chicane:1, bx:739, by:67}, {at:37, limit:6, bx:1117, by:700}, {at:45, limit:4, bx:603, by:712}, {at:52, limit:4, bx:929, by:553} ],
 
   /* Gravel — space indices whose inner (Race Line) Spot and/or outer Spot is gravel.
      A space in both lists has gravel right across it. Rule: at the end of your turn
