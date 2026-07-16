@@ -2101,7 +2101,7 @@ function showChampSummary(){
       ${summaryRow("Laps per race", `${G.laps} lap${G.laps>1?"s":""}`)}
       ${summaryRow("Rival AI", G.aiMode==="sim" ? "Full drivers" : "Legends module")}
       ${summaryRow("Pace / skill", DIFF_NAMES[G.difficulty]||"Rookie")}
-      ${summaryRow("Chop Shop", `Scav 1 Mod per race (${G.upgLevel==="all"?"rust + chrome":"rust"})`)}
+      ${summaryRow("Garage", `Draft 1 Mod per race (${G.upgLevel==="all"?"rust + chrome":"rust"})`)}
       ${summaryRow("Weather", ch.weatherOn ? "🎲 Random each race" : "Dry season")}
       ${summaryRow("Points", CHAMP_POINTS.slice(0,6).join(" / ")+" …")}
     </div>
@@ -2477,7 +2477,7 @@ function showHotseatSetup(){
         <div class="seg" id="hsdiff">
           ${["Davidson","Rookie","Pro","Legend"].map((n,i)=>`<button data-v="${i}"${i===st.diff?' class="sel"':''}>${n}</button>`).join("")}
         </div></div>
-      <div class="optgroup"><div class="olbl">Chop Shop</div>
+      <div class="optgroup"><div class="olbl">Garage</div>
         <div class="seg" id="hsgarage">
           <button data-v="none"${st.garage==="none"?' class="sel"':''}>Closed · stock rig</button>
           <button data-v="random"${st.garage==="random"?' class="sel"':''}>Scrap pull · 3 Mods</button>
@@ -2648,7 +2648,7 @@ function showSetup(){
         <div class="seg" id="segdiff">
           <button data-v="0"${sel(0,D.diff)}>Davidson</button><button data-v="1"${sel(1,D.diff)}>Rookie</button><button data-v="2"${sel(2,D.diff)}>Pro</button><button data-v="3"${sel(3,D.diff)}>Legend</button>
         </div></div>
-      <div class="optgroup"><div class="olbl">Chop Shop — bolt scrap onto your rig</div>
+      <div class="optgroup"><div class="olbl">Garage — Upgrade your deck</div>
         <div class="seg" id="seggarage">
           <button data-v="none"${sel("none",D.garage)}>Closed · stock rig</button><button data-v="draft"${sel("draft",D.garage)}>Scav run (3 rounds)</button><button data-v="random"${sel("random",D.garage)}>Scrap pull (3)</button>
         </div>
@@ -2760,7 +2760,7 @@ function showRaceSummary(){
       ${summaryRow("Distance", `${G.laps} lap${G.laps>1?"s":""} — ${G.laps===1?"Sprint":"Grand Prix"}`)}
       ${summaryRow("Rival AI", "Full drivers")}
       ${summaryRow("Pace / skill", DIFF_NAMES[G.difficulty]||"Rookie")}
-      ${summaryRow("Chop Shop", garageLabel())}
+      ${summaryRow("Garage", garageLabel())}
       ${summaryRow("Weather", weatherLabel())}
     </div>
     <div class="btnrow" style="margin-top:14px"><button class="act" id="sumGo">Lights out ▸</button></div>
@@ -2837,7 +2837,7 @@ function finishRaceStart(){
   for(const h of humans()){ applyWeatherCarSetup(h); drawToHand(h,7); }
   for(const p of G.players) if(p.sim) applyWeatherCarSetup(p);
   if(G.aiMode==="sim") for(const p of G.players) if(p.sim) drawToHand(p,7);   // rivals hold a hand too
-  const gtxt = (G.garage&&G.garage!=="none") ? ` · chop shop ${G.garage==="draft"?"scav run":"scrap pull"}` : "";
+  const gtxt = (G.garage&&G.garage!=="none") ? ` · Garage ${G.garage==="draft"?"scav run":"scrap pull"}` : "";
   const field = G.hotseat
     ? `${humans().length} local drivers${G.botCount?` + ${G.botCount} AI rival${G.botCount>1?"s":""}`:""}`
     : `${G.botCount} ${G.aiMode==="sim"?simProfile().name+"-level driver":"rival"}${G.botCount>1?"s":""}`;
