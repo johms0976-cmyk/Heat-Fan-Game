@@ -3032,9 +3032,10 @@ function showHotseatSetup(){
   const draw=()=>{
     if(st.laps!==1) st.laps = gpLaps();     // GP distance follows whichever circuit is loaded
     const takenBy = i => st.players.slice(0,st.count).findIndex((p,j)=>j!==i && p.color===st.players[i].color);
-    el.innerHTML=`<div class="sheet">
+    el.innerHTML=`<div class="sheet rules">
       <h1>HEAT <span>· pass &amp; play — ${TRACK.name}</span></h1>
       <div class="tag">2–4 drivers on this device. Enter a name and pick a car colour each — the game tells you when to pass it on.</div>
+      <div class="racerules">
       <div class="optgroup"><div class="olbl">Local drivers</div>
         <div class="seg" id="hscount">${[2,3,4].map(v=>`<button data-v="${v}"${v===st.count?' class="sel"':''}>${v}</button>`).join("")}</div></div>
       <div id="hsplayers"></div>
