@@ -1498,9 +1498,9 @@ const UPGRADE_CARDS = [
   {id:61, name:"Sliding Skirts", plus:1, xslip:1, limit:1, stress:1, adv:true},
   {id:62, name:"Sliding Skirts", v:1, xslip:1, slip:1, adv:true},
   {id:63, name:"Sliding Skirts", v:2, xslip:1, direct:true, adv:true},
-  {id:64, name:"Sliding Skirts", choice[2,3], xslip:1, adv:true},
+  {id:64, name:"Sliding Skirts", choice:[2,3], xslip:1, adv:true},
   {id:65, name:"Sliding Skirts", v:1, xslip:1, refresh:true, adv:true},
-  {id:66, name:"Sliding Skirts", choice[4,6], xslip:1, heat:1, adv:true},
+  {id:66, name:"Sliding Skirts", choice:[4,6], xslip:1, heat:1, adv:true},
 ];
 const upgradeById = id => UPGRADE_CARDS.find(u=>u.id===id);
 /* expected speed of an upgrade (for bot valuation & previews) */
