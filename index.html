@@ -325,7 +325,7 @@ button.act:disabled{opacity:.35; pointer-events:none}
 .sheet.rules .racerules::-webkit-scrollbar{width:5px}
 .sheet.rules .racerules::-webkit-scrollbar-thumb{background:#4a3f63; border-radius:3px}
 
-  
+    
   
 /* circuit brief modal — outline + a line or two, then cancel / next */
 #trackModal{z-index:70; background:rgba(10,8,14,.95)}
@@ -2491,9 +2491,10 @@ function showChampSetup(){
     weather: ch0.weatherOn === false ? "off" : "on"
   };
   const sel = (a,b) => a===b ? ' class="sel"' : '';
-  el.innerHTML=`<div class="sheet">
+  el.innerHTML=`<div class="sheet rules">
     <h1>HEAT <span>· championship rules</span></h1>
     <div class="tag">${cup.name} — ${cup.order.map(trackName).join(" → ")}. Most points after the finale is champion.</div>
+    <div class="racerules">
     <div class="optgroup"><div class="olbl">Rival cars — up to 7, for an 8-car grid</div>
       <div class="seg" id="segbots" style="gap:5px">
         ${[1,2,3,4,5,6,7].map(v=>`<button data-v="${v}"${sel(v,D.bots)}>${v}</button>`).join("")}
