@@ -1614,9 +1614,10 @@ const SPONSOR_CARDS = [
   {id:103, name:"Dramdo Brakes",         choice:[1,2,3,4], sponsor:true},
   {id:104, name:"Fredo & F.llo C.S.",    v:4, cool:2,      sponsor:true},
   {id:105, name:"Lord & Co. T.B.",       v:6,              sponsor:true},
-  {id:106, name:"E.Mercury Air System",  v:0, supercool:2, sponsor:true, hr:true},
-  {id:107, name:"Eole Wings Industries", v:5, draft:2,     sponsor:true, hr:true},
-  {id:108, name:"Thunder Valley Aero", choice:[0,4], xslip:1, sponsor:true, hr:true},  
+  {id:106, name:"E.Mercury Air System",  v:0, supercool:2, sponsor:true},
+  {id:107, name:"Eole Wings Industries", v:5, draft:2,     sponsor:true},
+  {id:108, name:"Thunder Valley Aero", choice:[0,4], xslip:1, sponsor:true}, 
+  {id:109, name:"Moquette Grip", v:2, direct:true, sponsor:true},
 ];
 const sponsorById = id => SPONSOR_CARDS.find(s=>s.id===id);
 function makeSponsorCard(def){ return Object.assign(makeCard("upg"), {def}); }
