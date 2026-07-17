@@ -1568,7 +1568,7 @@ function upgValueLabel(def){
    at end of turn it is REMOVED FROM THE GAME instead of discarded. You may
    also discard one from hand (then it lives in your discard pile like any
    card). Unused cards carry over between races; worthless when the season
-   ends. The real deck is 7 copies each of 5 sponsors; the two Heavy Rain
+   ends. The real deck is 7 copies each of 8 sponsors; the two Heavy Rain
    sponsors (E.Mercury, Eole Wings) are included too since this build already
    supports their Super Cool / Draft symbols. Turn SPONSOR_HEAVY_RAIN off for
    the strict base-game deck. */
@@ -1581,6 +1581,7 @@ const SPONSOR_CARDS = [
   {id:105, name:"Lord & Co. T.B.",       v:6,              sponsor:true},
   {id:106, name:"E.Mercury Air System",  v:0, supercool:2, sponsor:true, hr:true},
   {id:107, name:"Eole Wings Industries", v:5, draft:2,     sponsor:true, hr:true},
+  {id:108, name:"Thunder Valley Aero", choice:[0,4], xslip:1, sponsor:true, hr:true},  
 ];
 const sponsorById = id => SPONSOR_CARDS.find(s=>s.id===id);
 function makeSponsorCard(def){ return Object.assign(makeCard("upg"), {def}); }
