@@ -7603,10 +7603,10 @@ function showCareerSelect(){
     <div class="tc-art" style="display:flex;align-items:center;justify-content:center;font-size:40px">${icon}</div>
     <div class="tc-body"><div class="tc-name">${name}</div><div class="tc-meta">${meta}</div></div>
     <div class="tc-go">${go}</div></button>`;
-  el.innerHTML=`<div class="sheet">
+  el.innerHTML=`<div class="sheet rules">
     <h1>HEAT <span>· career</span></h1>
     <div class="tag">Pick your route across the map. Fuel gets you there, prize money keeps you rolling, the Grand Final crowns you.</div>
-    <div class="tracklist" style="margin-top:6px">
+    <div class="racerules" style="margin-top:6px">
       ${save?card("car-cont","🗺️","Continue career",`${esc(save.mapName||"Custom map")} · ⛽ ${save.fuel} · $${save.money} · ${save.done.length} stops made`,"Resume ▸"):""}
       ${CAREER_PRESETS.map((p,i)=>card("car-pre"+i,i?"⛰️":"🌊",p.name,`${p.nodes.length} stops · ${p.floors} legs · hand-built roadmap`,"Start ▸")).join("")}
       ${card("car-rand","🎲","Random roadmap","A fresh map every time — lanes, forks and showdowns rolled on the spot.","Roll ▸")}
@@ -7675,7 +7675,7 @@ function showCareerImport(){
 function careerGenMap(){
   const W={enemy:42,event:16,merchant:9,rest:7,elite:9,treasure:2,city:8,town:5,poi:2};
   const floors=11+Math.floor(Math.random()*4), lanes=5+Math.floor(Math.random()*2), paths=5+Math.floor(Math.random()*2);
-  const MARGIN=70, w=1000, h=1400, tfloor=Math.floor(floors/2), elmin=4;
+  const MARGIN=70, w=600, h=1400, tfloor=Math.floor(floors/2), elmin=4;
   const fp=f=>h-MARGIN-f*(h-2*MARGIN)/(floors-1), lp=l=>MARGIN+l*(w-2*MARGIN)/(lanes-1);
   for(let attempt=0;attempt<40;attempt++){
     const nodes=[], edges=[], grid={}; let nextId=1;
